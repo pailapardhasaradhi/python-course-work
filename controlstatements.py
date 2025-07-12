@@ -23,4 +23,3 @@ for i in range(0,20):
 # to print 3 table using for loop
 for i in range(0,20):
     print(f"3*{i}={3*i}") 
-

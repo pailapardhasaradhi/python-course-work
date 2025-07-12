@@ -5,7 +5,12 @@ data={1:{'name':'dinesh','exam_status':True,'python':100,'sql':95,'html':98},
       5:{'name':'sekhar','exam_status':True,'python':80,'sqi':75,'html':65},
 }
 for i in data.keys():
-    print(f'{i}')
+    print(f'{i}.{data[i]["name"]}')
+stuid=int(input("Enter the student id:"))
+if stuid in data:
+    if data[stuid]["exam_status"]:
+        
+        
 
 
 
