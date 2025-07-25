@@ -1,0 +1,5 @@
+def wish(name):
+    batch = 30
+    print(f"welcome to hyderabad {name}")
+   name = input("Enter the name:")
+   wish(name)

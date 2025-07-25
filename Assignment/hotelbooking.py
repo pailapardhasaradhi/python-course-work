@@ -1,10 +1,10 @@
 room_id = int(input("Enter Room ID: "))
 room_type = input("Enter Room Type (Single/Double/Suite): ")
 price_per_night = float(input("Enter Price per Night (₹): "))
-facilities = input("Enter Facilities (comma-separated): ").split(",")
+facilities = input("Enter Facilities : ").split(",")
 stock_info = (10, 5)  
 discount = float(input("Enter Discount Percentage: "))
-special_services = set(input("Enter Special Services (comma-separated): ").split(","))
+special_services = set(input("Enter Special Services : ").split(","))
 hotel_info = {
     "Name": "Sunset Hotel",
     "Location": "Hyderabad",

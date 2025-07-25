@@ -59,3 +59,15 @@ gallery={'1.beach.png','2.mountain.jpg','3.party1.jpg','4.selfie.png','5.birthda
 i=int(input('enter the number:'))
 if i in range(gallery):
    print(i)
+
+##
+n= input()
+n=n.replace('e','*')
+print(n)
+
+#
+def wish(name):
+   batch = 30
+   print(f"welcome to hyderabad {name}")
+   name = input("Enter the name:")
+   wish(name)
