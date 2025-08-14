@@ -68,7 +68,8 @@ print(Bank.noresbalance)
 Bank.noresbalance = 3000
 print(Bank.noresbalance)
 
-## 2. INHERITENCE
+## 2. INHERITENCE -----> 5-types of inheritence(single,hierarical,multiple,hybrid,multy)
+##inheritance
 class Status:
     def __init__(self,caption,image=None,vedio=None):
         self.caption = caption
@@ -95,5 +96,117 @@ paila = statusv1("hi friends","pardhu.png")
 paila.likes()
 paila.addmusic("fire storm")
 
+####single inheritance
+class Status:
+    def uploadImage(self,image):
+        self.image = image
+        print(f"{self.image} is uploaded to your status")
+class StatusV1(Status):
+    def addCaption(self,caption):
+        self.caption = caption
+        print(f"{self.caption} is uploaded to your status")
 
+
+pardhu = Status()
+pardhu.uploadImage("OG.png")
+
+paila = StatusV1()
+paila.uploadImage("ORIGINAL GANGSTER")
+paila.addCaption("mass")
+
+
+
+##hierarchical inheritance ----> SINGLE PARENT MANY CHILD
+class Status:
+    def uploadImage(self,image):
+        self.image = image
+        print(f"{self.image} is uploaded to your status")
+class StatusV1(Status):
+    def addCaption(self,caption):
+        self.caption = caption
+        print(f"{self.caption} is uploaded to your status")
+class Statusv2(Status):
+    def like(self):
+        print(f" your status got likes")
+
+pardhu = Status()
+pardhu.uploadImage("OG.png")
+
+paila = StatusV1()
+paila.uploadImage("ORIGINAL GANGSTER")
+paila.addCaption("mass")
+
+saradhi = Statusv2()
+saradhi.like()
+
+## MULTIPLE ---->MANY PARENTS SINGLE CHILD
+class Status:
+    def uploadImage(self,image):
+        self.image = image
+        print(f"{self.image} is uploaded to your status")
+class StatusV1(Status):
+    def addCaption(self,caption):
+        self.caption = caption
+        print(f"{self.caption} is uploaded to your status")
+class StatusV2(Status):
+    def like(self):
+        print(f" your status got likes")
+class StatusV3(StatusV1,StatusV2):
+    def AddMusic(self,music):
+        self.music= music
+        print(f"{self.music} is uploaded to your status")
+
+
+pardhu = Status()
+pardhu.uploadImage("OG.png")
+
+paila = StatusV1()
+paila.uploadImage("ORIGINAL GANGSTER")
+paila.addCaption("mass")
+
+saradhi = StatusV2()
+saradhi.like()
+
+pk = StatusV3()
+pk.uploadImage("OG.png")
+pk.addCaption("mass")
+pk.like()
+pk.AddMusic("FIRESTORM IS COMING.MP3")
+
+##
+class Instagram:
+    def __init__(self, username):
+        self.username = username
+        self.post = []
+        print(f"{self.username.center(40, '-')}")
+
+class InstagramV1(Instagram):
+    def __init__(self, username, bio):
+        super().__init__(username)
+        self.bio = bio
+        print(f'bio uploaded')
+
+dinesh = Instagram('dinesh123')
+sanjay = InstagramV1("sanjay", "Coder")
+
+####
+class Instagram:
+    def __init__(self, username):
+        self.username = username
+        print(f"{self.username} user is created! parent-1")
+
+class InstaV1:
+    def __init__(self, username):
+        self.username = username
+        print(f"{self.username} user is created! parent-2")
+
+class InstaV2(Instagram, InstaV1):
+    def __init__(self, username):
+        Instagram.__init__(self, username)
+        InstaV1.__init__(self, username)
+        print("Creating users from version 3")
+
+i = InstaV2("username--Xyz")
+
+##polymorphism ---> SAME METHOD DIFFERENT ACTION --> EX-- YOUTUBE PLAY OPTION SOME PERSON GET ADDS ANOTHER ONE DIDNT GET ADDS
 
