@@ -71,3 +71,48 @@ def wish(name):
    print(f"welcome to hyderabad {name}")
    name = input("Enter the name:")
    wish(name)
+
+
+   #
+   n = 10
+   for i in range(n+1):
+      if n % i == 0:
+         print(i)
+
+##
+def wish(p):
+   print("hi {p}")
+p= "pardhu"
+wish(p)
+
+##
+def login_credentials(email,pwd):
+   email_c = "pardhu@gmail.com"
+   pwd_c = "Pardhu@088"
+   if email == email_c and pwd == pwd :
+      return "login succesfull"
+   else:
+      return "login failed"
+   
+## calculator
+def add(a,b):
+   return a+b
+def subtarct(a,b):
+   return a-b
+def divide(a,b):
+   return a/b
+def multiply(a,b):
+   return a*b
+ch = input("enter the choice(1/2/3/4):")
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+if choice == '1':
+   print("Result:", add(a, b))
+elif choice == '2':1
+print("Result:", subtract(a, b))
+elif choice == '3':
+print("Result:", multiply(a, b))
+elif choice == '4':
+print("Result:", divide(a, b))
+else:
+print("Invalid input")
